@@ -1,0 +1,17 @@
+{
+  "name": "conectaqualifica-0.0.1",
+  "version": "1.0.0",
+  "description": "Site Conecta Qualificação",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "test": "start"
+  },
+  "author": "Lucas Cerucci, Vinicius Tavares",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mysql2": "^3.9.7"
+  }
+}
