@@ -1,8 +1,7 @@
 export class Admin{
-    constructor(userName, password, session){
-        this.userNamae = userName;
+    constructor(username, password){
+        this.username = username;
         this.password = password;
-        this.session = session;
     }
 
     getUserName(){
@@ -21,11 +20,10 @@ export class Admin{
         this.password = newPassword;
     }
 
-    getSession(){
-        return this.session;
-    }
-
-    setSession(newSession){
-        this.session = newSession;
+    adminJson(){
+        return adminInfo = {
+            username : this.username,
+            password: this.password
+        }
     }
 }
