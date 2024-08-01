@@ -6,7 +6,7 @@ export class CourseDeleteController{
     constructor(){
     }
 
-    async deleteCourse(req, res){
+    async deleteCourse(req, res, next){
         try{
             const idCourse = Number(req.params.id);
             const result = await deleteService.deleteCourse(idCourse);

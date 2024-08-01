@@ -1,5 +1,5 @@
-import { ErrorHandling } from "../../Error/ErrorHandling";
-import { InstitutionDeleteDAO } from "../../DataBase/DAO/Institution/InstitutionDeleteDAO";
+import { ErrorHandling } from "../../Error/ErrorHandling.js";
+import { InstitutionDeleteDAO } from "../../DataBase/DAO/Institution/InstitutionDeleteDAO.js";
 
 const Delete = new InstitutionDeleteDAO();
 

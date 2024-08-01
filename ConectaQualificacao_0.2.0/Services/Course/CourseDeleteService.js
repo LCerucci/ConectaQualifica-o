@@ -1,4 +1,4 @@
-import { CourseDeleteDAO } from "../../DataBase/DAO/Course/CourseDeleteDAO";
+import { CourseDeleteDAO } from "../../DataBase/DAO/Course/CourseDeleteDAO.js";
 
 const Delete = new CourseDeleteDAO();
 

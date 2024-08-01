@@ -1,4 +1,4 @@
-import { CourseCreateService } from "../../Services/Course/CourseCreateService";
+import { CourseCreateService } from "../../Services/Course/CourseCreateService.js";
 
 const createService = new CourseCreateService;
 
@@ -22,7 +22,7 @@ export class CoursePostConstroller{
         }
     }
 
-    async createNewRegisterRequirement(req, res) {
+    async createNewRegisterRequirement(req, res, next) {
         try {
             const idCourse = Number(req.params.id);
             const registerRequirement = { 
@@ -45,7 +45,7 @@ export class CoursePostConstroller{
         }
     }
 
-    async createNewDeadline(req, res) {
+    async createNewDeadline(req, res, next) {
         try {
             const idCourse = Number(req.params.id);
             const deadline = { fromDate: req.body.fromDate, toDate: req.body.toDate };

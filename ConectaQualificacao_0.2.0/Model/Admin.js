@@ -1,29 +1,26 @@
-export class Admin{
-    constructor(username, password){
+export class Admin {
+    constructor(id, username, password) {
+        this.id = id;
         this.username = username;
         this.password = password;
     }
 
-    getUserName(){
-        return this.getUserName;
+    getUserName() {
+        return this.userName;
     }
 
-    setUserName(newUserName){
-        this.userName = newUserName;
+    setUserName(newUsername) {
+        this.userName = newUsername;
     }
 
-    getPassword(){
-        return this.password;
+    getId() {
+        return this.id;
     }
 
-    setPassword(newPassword){
-        this.password = newPassword;
-    }
-
-    adminJson(){
-        return adminInfo = {
-            username : this.username,
-            password: this.password
-        }
+    adminJson() {
+        return {
+            id: this.id,
+            username: this.username
+        };
     }
 }

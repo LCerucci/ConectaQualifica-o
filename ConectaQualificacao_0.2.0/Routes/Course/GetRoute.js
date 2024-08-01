@@ -1,5 +1,6 @@
 import { Router } from "express";
 import { CourseGetController } from "../../Controller/Course/CourseGetController.js";
+import { Authentication } from "../../Middlewares/LoginAuth.js";
 
 const courseGetRoute = Router();
 const controller = new CourseGetController();

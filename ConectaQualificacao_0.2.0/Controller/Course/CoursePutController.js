@@ -1,4 +1,4 @@
-import { CourseUpdateService } from "../../Services/Course/CourseUpdateService";
+import { CourseUpdateService } from "../../Services/Course/CourseUpdateService.js";
 
 const putService = new CourseUpdateService();
 
@@ -6,7 +6,7 @@ export class CoursePutController{
     constructor(){
     }
 
-    async updateCourse(req, res) { 
+    async updateCourse(req, res, next) { 
         try {
             const idCourse = Number(req.params.id);
             const { name, field, description, degree, tuitionFee} = req.body;
@@ -23,7 +23,7 @@ export class CoursePutController{
         }
     }
 
-    async updateDeadline(req, res){
+    async updateDeadline(req, res, next){
         try{
             const idCourse = Number(req.params.id);
             const {fromDate, toDate} = req.body;
@@ -39,7 +39,7 @@ export class CoursePutController{
         }
     }
 
-    async updateRegisterRequirement(req, res){
+    async updateRegisterRequirement(req, res, next){
         try{
             const idCourse = Number(req.params.id);
             const {educationLevel, ageRange, gender, firstJob, freeCourse} = req.body;

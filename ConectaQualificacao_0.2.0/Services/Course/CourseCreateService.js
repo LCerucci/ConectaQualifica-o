@@ -18,16 +18,14 @@ export class CourseCreateService{
                 const course = new Course(null, idInstitution, name, field, description, degree, tuitionFee);
                 const result = await Create.createCourse(course.getidInstitution(), course.getName(), course.getField(), course.getDescription(), course.getDegree(), course.getTuitionFee());
 
-                if (result !== null)
-                    return course.returnCourseJson();
-                else
-                    return null;
+                return result !== null? course.returnCourseJson(): null;
             }
             else
                 return null;
         }
         catch (err) {
             ErrorHandling.simplifyError(err);
+            return null;
         }
     }
 
@@ -43,10 +41,7 @@ export class CourseCreateService{
             
             const result = await Promise.all(promises);
 
-            if (result.every( promise => promise !== null))
-                return course.getRegisterRequirement();
-            else
-                return null;
+            return result.every( promise => promise !== null)? course.getRegisterRequirement(): null;
         }
         catch (err) {
             ErrorHandling.HandleError(err);
