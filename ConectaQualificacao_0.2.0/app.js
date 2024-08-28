@@ -1,5 +1,6 @@
 // Dependencies
 import express from 'express';
+//import cors from 'cors';
 import dotenv from 'dotenv';
 import morgan from 'morgan';
 import https from 'https';
@@ -9,7 +10,7 @@ import cookieParser from 'cookie-parser';
 import { fileURLToPath } from 'url';
 
 // Middleware files
-import { ErrorHandling } from './Error/ErrorHandling.js';
+import { ErrorHandling } from './Server/Error/ErrorHandling.js';
 //import { validadeFields } from './Middlewares/ProcessFields.js';
 
 // Import global variables
@@ -48,18 +49,21 @@ app.use(express.urlencoded({ extended: true }));
 //Cookie definitions
 app.use(cookieParser());
 
+//Fetch 
+//app.use(cors());
+
 // Route files
-import adminRoute from './Routes/Admin/AdminRoute.js';
+import adminRoute from './Server/Routes/Admin/AdminRoute.js';
 
-import courseGetRoute from './Routes/Course/GetRoute.js';
-import coursePostRoute from './Routes/Course/PostRoute.js';
-import coursePutRoute from './Routes/Course/PutRoute.js';
-import courseDeleteRoute from './Routes/Course/DeleteRoute.js';
+import courseGetRoute from './Server/Routes/Course/GetRoute.js';
+import coursePostRoute from './Server/Routes/Course/PostRoute.js';
+import coursePutRoute from './Server/Routes/Course/PutRoute.js';
+import courseDeleteRoute from './Server/Routes/Course/DeleteRoute.js';
 
-import instGetRoute from './Routes/Institution/GetRoute.js';
-import instPostRoute from './Routes/Institution/PostRoute.js';
-import instPutRoute from './Routes/Institution/PutRoute.js';
-import instDeleteRoute from './Routes/Institution/DeleteRoute.js';
+import instGetRoute from './Server/Routes/Institution/GetRoute.js';
+import instPostRoute from './Server/Routes/Institution/PostRoute.js';
+import instPutRoute from './Server/Routes/Institution/PutRoute.js';
+import instDeleteRoute from './Server/Routes/Institution/DeleteRoute.js';
 
 //Admin route
 app.use('/admin', adminRoute);

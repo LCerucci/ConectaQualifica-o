@@ -2,13 +2,14 @@ import { Course } from "./Course.js";
 
 export class Institution{
     constructor(id=null, name=null, educationLevel=null, contact=null, email=null, address=null, link=null){
-        this.name = name;
-        this.educationLevel = educationLevel;
-        this.contact = contact;
-        this.email = email;
-        this.address = address;
-        this.link = link;
-        this.courses = [];
+        this.name = name;//
+        this.educationLevel = educationLevel;//
+        this.contact = contact;//
+        this.email = email;//
+        this.address = address;//
+        this.link = link;//
+        this.courses = [];//
+        //insert the description! ---> from model to controler <---
         this.id = id;      
     }
 

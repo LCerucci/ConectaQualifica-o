@@ -5,6 +5,7 @@ export class Course {
         this.field = field;
         this.degree = degree;
         this.tuitionFee = Number(tuitionFee);
+        //inserir identificação se o curso é do conecta ou não ---> URGENTE <---
 
         this.idInstitution = idInstitution;
         this.id = id;
@@ -100,9 +101,9 @@ export class Course {
         return {
             idCourse: this.id,
             idInstitution: this.idInstitution,
-            name: this.name,
-            description: this.description,
-            field: this.field,
+            name: this.name, //
+            description: this.description,//
+            field: this.field,//
             degree: this.degree,
             tuitionFee: this.tuitionFee,
             registerRequirement: this.registerRequirement,
